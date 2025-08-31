@@ -1,35 +1,51 @@
-from flask import Blueprint
-from controllers.energy_controller import (
-    energy_status, update_voltage, get_zone_history, 
-    run_optimization, get_predictions
-)
+from flask import Blueprint, request, jsonify
+from services.firebase_service import get_document, set_document, query_collection, add_document
 from core.decorators import role_required, log_api_call
+import time
 
 energy_bp = Blueprint("energy", __name__)
 
 @energy_bp.route("/status", methods=["GET"])
 @log_api_call
 def status():
-    return energy_status()
+    zones = query_collection("zones")
+    return jsonify({"zones": zones})
+
 
 @energy_bp.route("/updateVoltage", methods=["POST"])
 def update_voltage_route():
-    return update_voltage()
+    data = request.get_json()
+    zone = data.get("zone")
+    voltage = data.get("voltage")
+
+    if not zone or voltage is None:
+        return jsonify({"message": "Zone and voltage required"}), 400
+
+    set_document("zones", zone, {"voltage": voltage})
+    return jsonify({"message": "Voltage updated"})
+
 
 @energy_bp.route("/history", methods=["GET"])
 @log_api_call
 @role_required("admin", "household")
 def history(user_data):
-    return get_zone_history()
+    zone = request.args.get("zone")
+    filters = [("zone", "==", zone)] if zone else []
+    history = query_collection("energy_history", filters=filters, order_by="timestamp", limit=100)
+    return jsonify({"history": history})
+
 
 @energy_bp.route("/optimize", methods=["POST"])
 @log_api_call
 @role_required("admin")
 def optimize(user_data):
-    return run_optimization()
+    set_document("system", "optimizer_trigger", {"status": "pending"})
+    return jsonify({"message": "Optimization started"})
+
 
 @energy_bp.route("/predictions", methods=["GET"])
 @log_api_call
 @role_required("admin")
 def predictions(user_data):
-    return get_predictions()
+    predictions = query_collection("predictions", order_by="timestamp", limit=10)
+    return jsonify({"predictions": predictions})

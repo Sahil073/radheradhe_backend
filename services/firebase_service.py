@@ -1,5 +1,5 @@
 """
-Enhanced Firebase service with retry logic and error handling (Firebase-only)
+Comprehensive Firebase service with generic CRUD, query, and retry logic
 """
 
 import firebase_admin
@@ -21,15 +21,74 @@ if not firebase_admin._apps:
     except Exception as e:
         logger.error(f"Firebase initialization failed: {e}")
 
+
+# ---------------- Generic Document Functions ----------------
+def get_document(path):
+    """Fetch any document from Firebase by path"""
+    try:
+        ref = db.reference(path)
+        return ref.get() or {}
+    except Exception as e:
+        logger.error(f"Error fetching document {path}: {e}")
+        return {}
+
+
+def set_document(path, data):
+    """Set any document in Firebase by path"""
+    try:
+        ref = db.reference(path)
+        ref.set({
+            **data,
+            "lastUpdated": time.time()
+        })
+        return True
+    except Exception as e:
+        logger.error(f"Error setting document {path}: {e}")
+        return False
+
+
+def add_document(path, data):
+    """Add a new document to a Firebase collection with auto-generated key"""
+    try:
+        ref = db.reference(path)
+        new_ref = ref.push(data)
+        logger.info(f"Document added to {path} with key {new_ref.key}")
+        return new_ref.key
+    except Exception as e:
+        logger.error(f"Error adding document to {path}: {e}")
+        return None
+
+
+def get_collection(path):
+    """Fetch all documents from a Firebase collection"""
+    try:
+        ref = db.reference(path)
+        return ref.get() or {}
+    except Exception as e:
+        logger.error(f"Error fetching collection {path}: {e}")
+        return {}
+
+
+def query_collection(path, filter_func=None):
+    """
+    Fetch all documents from a Firebase path and optionally filter them.
+    :param filter_func: function to filter documents, receives (key, value)
+    """
+    try:
+        data = get_collection(path)
+        if filter_func:
+            data = {k: v for k, v in data.items() if filter_func(k, v)}
+        return data
+    except Exception as e:
+        logger.error(f"Error querying collection {path}: {e}")
+        return {}
+
+
+# ---------------- Sensor & Command Functions ----------------
 def get_sensor_data():
     """Fetch latest sensor data from Firebase"""
-    try:
-        ref = db.reference("sensors/")
-        data = ref.get()
-        return data or {}
-    except Exception as e:
-        logger.error(f"Error fetching sensor data: {e}")
-        return {}
+    return get_document("sensors/")
+
 
 def set_command(zone, command, retry_count=3):
     """
@@ -37,10 +96,9 @@ def set_command(zone, command, retry_count=3):
     """
     for attempt in range(retry_count):
         try:
-            ref = db.reference(f"commands/{zone}")
-            ref.set({
+            path = f"commands/{zone}"
+            set_document(path, {
                 "command": command,
-                "timestamp": time.time(),
                 "attempt": attempt + 1
             })
             logger.info(f"Command sent successfully: {zone} -> {command}")
@@ -52,36 +110,21 @@ def set_command(zone, command, retry_count=3):
     logger.error(f"Failed to send command after {retry_count} attempts")
     return False
 
+
 def get_zone_status(zone):
     """Get current status of a specific zone"""
-    try:
-        ref = db.reference(f"status/{zone}")
-        return ref.get() or {}
-    except Exception as e:
-        logger.error(f"Error getting zone status: {e}")
-        return {}
+    return get_document(f"status/{zone}")
+
 
 def set_zone_status(zone, status):
     """Update zone status in Firebase"""
-    try:
-        ref = db.reference(f"status/{zone}")
-        ref.set({
-            **status,
-            "lastUpdated": time.time()
-        })
-        return True
-    except Exception as e:
-        logger.error(f"Error setting zone status: {e}")
-        return False
+    return set_document(f"status/{zone}", status)
+
 
 def get_all_zone_commands():
     """Get all pending commands"""
-    try:
-        ref = db.reference("commands/")
-        return ref.get() or {}
-    except Exception as e:
-        logger.error(f"Error getting commands: {e}")
-        return {}
+    return get_document("commands/")
+
 
 def clear_command(zone):
     """Clear executed command"""
