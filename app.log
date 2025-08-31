@@ -1,0 +1,71 @@
+2025-08-31 10:12:16,550 - services.firebase_service - INFO - Firebase initialized successfully
+2025-08-31 10:12:21,403 - services.background_service - ERROR - Database initialization failed
+2025-08-31 10:12:21,404 - services.background_service - INFO - Background monitoring started
+2025-08-31 10:12:21,455 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.150.55:5000
+2025-08-31 10:12:21,456 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-31 10:12:21,457 - werkzeug - INFO -  * Restarting with stat
+2025-08-31 10:12:21,902 - services.firebase_service - INFO - Firebase initialized successfully
+2025-08-31 10:12:26,829 - services.background_service - ERROR - Database initialization failed
+2025-08-31 10:12:26,830 - services.background_service - INFO - Background monitoring started
+2025-08-31 10:12:26,866 - werkzeug - WARNING -  * Debugger is active!
+2025-08-31 10:12:26,869 - werkzeug - INFO -  * Debugger PIN: 108-225-293
+2025-08-31 10:12:41,860 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 10:12:41] "[33mGET / HTTP/1.1[0m" 404 -
+2025-08-31 10:12:42,103 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 10:12:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-31 10:15:27,628 - services.firebase_service - INFO - Firebase initialized successfully
+2025-08-31 10:15:32,503 - services.background_service - ERROR - Database initialization failed
+2025-08-31 10:15:32,506 - services.background_service - INFO - Background monitoring started
+2025-08-31 10:15:32,562 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.150.55:5000
+2025-08-31 10:15:32,562 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-31 10:15:32,563 - werkzeug - INFO -  * Restarting with stat
+2025-08-31 10:15:32,980 - services.firebase_service - INFO - Firebase initialized successfully
+2025-08-31 10:15:38,051 - services.background_service - ERROR - Database initialization failed
+2025-08-31 10:15:38,054 - services.background_service - INFO - Background monitoring started
+2025-08-31 10:15:38,104 - werkzeug - WARNING -  * Debugger is active!
+2025-08-31 10:15:38,106 - werkzeug - INFO -  * Debugger PIN: 108-225-293
+2025-08-31 10:17:18,043 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sahil\\OneDrive\\Desktop\\hello\\project\\backend-flask\\services\\background_service.py', reloading
+2025-08-31 10:17:18,312 - werkzeug - INFO -  * Restarting with stat
+2025-08-31 10:17:18,768 - services.firebase_service - INFO - Firebase initialized successfully
+2025-08-31 10:17:19,655 - services.background_service - INFO - Background monitoring started
+2025-08-31 10:17:19,697 - werkzeug - WARNING -  * Debugger is active!
+2025-08-31 10:17:19,699 - werkzeug - INFO -  * Debugger PIN: 108-225-293
+2025-08-31 10:17:29,927 - services.firebase_service - INFO - Firebase initialized successfully
+2025-08-31 10:17:30,707 - services.background_service - INFO - Background monitoring started
+2025-08-31 10:17:30,756 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.150.55:5000
+2025-08-31 10:17:30,756 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-31 10:17:30,757 - werkzeug - INFO -  * Restarting with stat
+2025-08-31 10:17:31,171 - services.firebase_service - INFO - Firebase initialized successfully
+2025-08-31 10:17:31,955 - services.background_service - INFO - Background monitoring started
+2025-08-31 10:17:31,998 - werkzeug - WARNING -  * Debugger is active!
+2025-08-31 10:17:32,001 - werkzeug - INFO -  * Debugger PIN: 108-225-293
+2025-08-31 10:17:47,593 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 10:17:47] "[33mGET / HTTP/1.1[0m" 404 -
+2025-08-31 10:18:40,250 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sahil\\OneDrive\\Desktop\\hello\\project\\backend-flask\\app.py', reloading
+2025-08-31 10:18:40,446 - werkzeug - INFO -  * Restarting with stat
+2025-08-31 10:18:40,893 - services.firebase_service - INFO - Firebase initialized successfully
+2025-08-31 10:18:41,825 - services.background_service - INFO - Background monitoring started
+2025-08-31 10:18:41,871 - werkzeug - WARNING -  * Debugger is active!
+2025-08-31 10:18:41,873 - werkzeug - INFO -  * Debugger PIN: 108-225-293
+2025-08-31 10:18:44,963 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 10:18:44] "GET / HTTP/1.1" 200 -
+2025-08-31 10:22:00,555 - services.firebase_service - INFO - Firebase initialized successfully
+2025-08-31 10:22:01,358 - services.background_service - INFO - Background monitoring started
+2025-08-31 10:22:01,411 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.1.150.55:5000
+2025-08-31 10:22:01,411 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-31 10:22:01,413 - werkzeug - INFO -  * Restarting with stat
+2025-08-31 10:22:01,803 - services.firebase_service - INFO - Firebase initialized successfully
+2025-08-31 10:22:02,555 - services.background_service - INFO - Background monitoring started
+2025-08-31 10:22:02,595 - werkzeug - WARNING -  * Debugger is active!
+2025-08-31 10:22:02,597 - werkzeug - INFO -  * Debugger PIN: 108-225-293
+2025-08-31 10:22:05,778 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 10:22:05] "GET / HTTP/1.1" 200 -
+2025-08-31 10:22:12,669 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 10:22:12] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-08-31 10:23:20,294 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 10:23:20] "GET /api/health HTTP/1.1" 200 -

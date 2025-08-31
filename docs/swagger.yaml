@@ -1,0 +1,20 @@
+openapi: 3.0.0
+info:
+  title: Smart Microgrid Backend API
+  version: 1.0.0
+paths:
+  /api/auth/login:
+    post:
+      summary: User login (Admin/Household)
+  /api/admin/control:
+    post:
+      summary: Admin controls zone power
+  /api/household/status:
+    get:
+      summary: Household retrieves their data
+  /api/energy/status:
+    get:
+      summary: Energy status overview
+  /api/scenario/apply:
+    post:
+      summary: Apply auto-control scenarios

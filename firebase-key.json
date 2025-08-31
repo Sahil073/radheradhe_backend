@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "microgrid-monitoring-system",
+  "private_key_id": "0acf6db11ef9709372b2e3a0584f7220dd8a6e7a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCbqNI5dbIkQDrO\neYotFX2OEc0lJwCyCDSyO8sbb0miFRBcQwQYQ+QEkKU58GOL8n1jCHuRifIZlYXk\nfrIUw840PkEx66+2QIprmWV/MGOixIBerfeWplDWnTQJH1c8rZ3lbt/PJp7qPdiQ\nB8NirtMMPbwF3xNMkxZ/8CWJnOngBgxrF+HLd5G6SLqy6rdBWEtZMJN5IXt3Y4EM\nxXk3HK0VSYeof6njJJDSvgPsIPyZgy7ffoT3fe8Tfe1j7eH3ZjUW0ZNF+ZMK6/DZ\nkFe+Ii0OrzkNFyv/x/jiaSFaj5qk1Hs8BkbrQWy34VgKM31hTHUjS0N2r189jBny\nOzYt+sdnAgMBAAECggEAGZb5aITW0mrUwBjvBFZiG7cFeLQewyXiM+LskwgKnODF\nncVOqQaQN8fnwcypMNqejmdYmSaKbHZOWrARaqR+A8ywPxq1+kpF90ZyjyRPXPTc\n/bOv3k5dP8r8QPusBcetC4jctlttCKk+Lv93uYNwIrULchOoQpBzxHigUy0+rZtP\nTyCN8jgjczWS0BqruV4xo1xBuaAXK/nByYjfeYOvpYERJ2T1+Kg0djBd5e7E2few\naHVa0BsLW9AYr+MPqnDKQcKcN79UaCuImE7QZXNVTOhxljWY8cvObMj3Prp8p+9U\nppCUHb9qkPgDdNSKllGiTU/GX5xEPWr9HDrZm6ZPAQKBgQDKdEe316UoBsQdBLJc\n58DSz1BxETJWZiE6r5fr1mt6TGE9fq7Ejn00i+76fZYG/x0ipSMQ1XXzPWrQ1Klk\not9mIMXm/jZGt9ZOuHhPMX98LSCkx9j9qIb7NlQthOwd/wqPJsA6Bu/0CKWjl9PU\ny641V5NNeYuMwt2G+UfmTUenwQKBgQDE1CxIfZXs7KmWXq5OX6D/s4HTSPRORGr1\ni9QjxminCtnHqFD7b/l/xBqkWIY8cM3fvnk4OIMsScF1C6+E8gzyKWVlCWCjok4G\nBh2To7Ck/rGjdkHcPNBb5NZdk+wdZ2SXfyuo2ceOQBDgq2Zfebe0xaJMZekKj/1y\noPDka0Z5JwKBgQCSSYFE8vowuOreOPWUshUffpOWj6F60qMyH4076RySKzycTbyE\n5JzN6ksNDs/oUFDCJub2k/d9giR7rx6TTCj2R7oYVhnr8YxWJ28vcgm3NXh/+LPv\nXeXjAXfDyGdAqXf8xjhh9X9PKyxc0ClNertvac9TTP8r/+ZIUDnGzJJ5QQKBgQCh\nPIXCJE6KtRv/ODRls2S50pzJLfwjmVxdJVx0qfXU0MiyC6m7L3EdPtHsSzA7ltSv\nMuMuMO0TfJ/jd90idP4x6cNLzzDBGxX7TUsxRGhR4Oo304oEFjVA8ebA5YoIVEhM\n6jojqbMVTloFEaNdFuJsTXG0T89lfarLGhf7pf0nBQKBgACPkkVfOV3KQgoB0oPO\nkbT5Ro+Iuls/6By9tqxG7iUZApUG+1FTTNTwWKHXXRcWMzvD9XUHBZyqV/S2Ymdc\nOxWBIJOcz7nGicTHP28q/Ks/AnrJJ+c/BufgZdmnFD3Z1LhPXfOHXSjALI30v4fi\n2BEyob6NvzecgtHmTYgYi0By\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@microgrid-monitoring-system.iam.gserviceaccount.com",
+  "client_id": "117900037767841256341",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40microgrid-monitoring-system.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
